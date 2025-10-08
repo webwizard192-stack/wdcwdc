@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Безопасный интернет для детей</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e7f0fd;
+      margin: 0;
+      color: #333;
+    }
+
+    .top-bar {
+      background: #f0f4ff;
+      padding: 8px 20px;
+      text-align: right;
+      font-size: 16px;
+    }
+
+    .top-bar a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #2b5dab;
+      font-weight: bold;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      position: relative;
+    }
+
+    header img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+
+    /* --- Меню --- */
+    nav {
+      background: #d0e2ff;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px 0;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    nav a {
+      color: #2b5dab;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* --- Кнопка меню (гамбургер) --- */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* --- Контент --- */
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      color: #2b5dab;
+    }
+
+    ul.rules {
+      list-style: none;
+      padding: 0;
+    }
+
+    .rules li {
+      background: white;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    /* --- Мобильная адаптация --- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 🔁 Переключатель языка -->
+<div class="top-bar">
+  Язык: 
+  <a href="#">Русский</a> | 
+  <a href="kz.html">Қазақша</a>
+</div>
+
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Замок" />
+  <h1>Безопасный интернет для детей</h1>
+  <p>Учимся пользоваться интернетом с умом</p>
+
+  <!-- 🔹 Кнопка меню -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- 🔹 Меню -->
+<nav id="nav-menu">
+  <a href="#rules">Правила</a>
+  <a href="buklet-ru.png" download>Памятки</a>
+  <a href="#story">История</a>
+  <a href="#scratch-game">Игра</a>
+  <a href="rd-index.html">Родителям</a>
+</nav>
+
+<main>
+  <section id="rules">
+    <h2>Основные правила безопасности</h2>
+    <ul class="rules">
+      <li>🔒 Не сообщай никому свои пароли.</li>
+      <li>⚠️ Не открывай подозрительные ссылки и вложения.</li>
+      <li>🕵️‍♂️ Не публикуй личную информацию в открытом доступе.</li>
+      <li>🔐 Используй сложные пароли и меняй их регулярно.</li>
+      <li>👨‍👩‍👧 Сообщай взрослым, если кто-то пишет неприятные сообщения.</li>
+    </ul>
+  </section>
+
+  <section style="text-align:center; margin: 20px;">
+    <h2>Правила поведения в интернете!</h2>
+    <iframe width="100%" height="250" 
+            src="https://www.youtube.com/embed/TUodzCtBSWU" 
+            title="Қауіпсіз интернет | Balapan TV"
+            frameborder="0" allowfullscreen></iframe>
+    <p style="font-size:14px; color:gray; margin-top:10px;">
+      Канал: <a href="https://www.youtube.com/watch?v=TUodzCtBSWU" target="_blank">Фиксики</a><br>
+      Использовано с официального канала YouTube через встроенный просмотр. Все права принадлежат правообладателю.
+    </p>
+  </section>
+
+  <section id="story">
+    <h2>📘 История из жизни</h2>
+    <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+      <p><strong>История Вани (10 лет):</strong></p>
+      <p>Однажды Ваня получил сообщение от незнакомца в онлайн-игре. Тот попросил адрес, чтобы «прислать подарок». Ваня вспомнил, что нельзя рассказывать личные данные, и сообщил родителям.</p>
+      <p><strong>Вывод:</strong> даже если кто-то кажется дружелюбным, нельзя доверять незнакомцам в интернете.</p>
+    </div>
+  </section>
+
+  <section id="scratch-game" style="margin-top: 50px;">
+    <h2>🎮 Интерактивная игра Scratch</h2>
+    <div style="background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);max-width:600px;margin:0 auto;text-align:center;">
+      <p style="margin-bottom: 15px;">Попробуй пройти игру на тему интернет-безопасности!</p>
+      <div style="position: relative; width: 100%; padding-top: 83%; border-radius: 12px; overflow: hidden;">
+        <iframe 
+          src="https://scratch.mit.edu/projects/1224641081/embed" 
+          allowtransparency="true" 
+          frameborder="0" 
+          scrolling="no" 
+          allowfullscreen
+          style="position: absolute;top:0;left:0;width:100%;height:100%;border:none;">
+        </iframe>
+      </div>
+      <p style="margin-top: 10px; font-size: 14px; color: #666;">
+        *Игра загружена с сайта <a href="https://scratch.mit.edu" target="_blank">Scratch</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Безопасный интернет для детей
+</footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-menu');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    nav.classList.toggle('show');
+  });
+</script>
+
+</body>
+</html>

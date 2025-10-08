@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Балаларға арналған интернет қауіпсіздігі</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e7f0fd;
+      margin: 0;
+      color: #333;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* 🔁 Тіл ауыстыру */
+    .top-bar {
+      background: #f0f4ff;
+      padding: 8px 20px;
+      text-align: right;
+      font-size: 16px;
+    }
+    .top-bar a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #2b5dab;
+      font-weight: bold;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header img {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+
+    /* 📱 Мәзір */
+    nav {
+      background: #d0e2ff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #2b5dab;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 10px 15px;
+      display: inline-block;
+    }
+
+    /* Бургер батырмасы */
+    .menu-toggle {
+      display: none;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px auto;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      color: #2b5dab;
+    }
+
+    ul.rules {
+      list-style: none;
+      padding: 0;
+    }
+    .rules li {
+      background: white;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+
+    /* 📱 Мобильді нұсқа */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<!-- 🔁 ТІЛ АУЫСТЫРУ -->
+<div class="top-bar">
+  Тіл:
+  <a href="index.html">Орысша</a> |
+  <a href="#">Қазақша</a>
+</div>
+
+<header>
+  <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Құлып" />
+  <h1>Балаларға арналған интернет қауіпсіздігі</h1>
+  <p>Интернетті қауіпсіз және ақылмен қолдануды үйренеміз</p>
+</header>
+
+<!-- 📱 Мобильді мәзір -->
+<button class="menu-toggle" onclick="toggleMenu()">☰ Мәзір</button>
+<nav id="menu">
+  <a href="#rules">Ережелер</a>
+  <a href="#materials">Памяткалар</a>
+  <a href="#story">Оқиға</a>
+  <a href="#scratch-game">Ойын</a>
+  <a href="ata-analar.html">Ата-аналарға</a>
+</nav>
+
+<main>
+  <section id="rules">
+    <h2>Негізгі қауіпсіздік ережелері</h2>
+    <ul class="rules">
+      <li>🔒 Парольдеріңді ешкімге айтпа.</li>
+      <li>⚠️ Күдікті сілтемелер мен файлдарды ашпа.</li>
+      <li>🕵️‍♂️ Жеке ақпаратты ашық жариялама.</li>
+      <li>🔐 Күрделі парольдер қолданып, оларды үнемі жаңартып отыр.</li>
+      <li>👨‍👩‍👧 Егер біреу жағымсыз немесе оғаш хабар жіберсе, ересектерге хабарла.</li>
+      <li>📥 Белгісіз сайттардан файл жүктеме.</li>
+      <li>🌐 Сайттардың қауіпсіз екеніне көз жеткіз (https арқылы басталатынына қара).</li>
+      <li>🚫 Интернеттегі бөтен адамдарға сенбе — олар достық сияқты көрінсе де.</li>
+      <li>🛡️ Антивирусты орнатып, жаңартып отыр.</li>
+      <li>🙅‍♂️ Қорлауға, жала жабуға және фейк ақпарат таратуға қатыспа.</li>
+    </ul>
+  </section>
+
+  <section id="materials" style="margin-top:40px;">
+    <h2>📄 Памяткалар мен материалдар</h2>
+    <p>📥 <a href="buklet-kz.png" download>Буклетті жүктеу</a></p>
+    <div style="text-align:center; margin: 20px;">
+      <h2>Интернеттегі қауіпсіздік туралы бейнеролик</h2>
+      <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/1AtHIUOtdJs"
+              title="Интернеттегі қауіпсіздік"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
+      <p style="font-size:14px; color:gray; margin-top:10px;">
+        Арна: <a href="https://www.youtube.com/watch?v=1AtHIUOtdJs" target="_blank">Айнура Какенова</a><br>
+        Бұл бейне YouTube ресми арнасынан ендірілген. Барлық құқықтар бейнеролик иесіне тиесілі.
+      </p>
+    </div>
+  </section>
+
+  <section id="story">
+    <h2>📘 Өмірден оқиға</h2>
+    <div style="background:white;padding:20px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+      <p><strong>Ваняның оқиғасы (10 жас):</strong></p>
+      <p>Бір күні Ваня онлайн ойыннан бөтен адамнан хабар алды. Ол өзін «жаңа досым» деп таныстырып, «сыйлық жіберу үшін мекенжайыңды айт» деді. Ваня интернетте жеке ақпаратты айтуға болмайтынын еске алып, дереу ата-анасына айтты.</p>
+      <p>Ата-анасы оны дұрыс әрекеті үшін мақтады және бірлесе отырып қолданушыны блоктады.</p>
+      <p><strong>Қорытынды:</strong> Біреу достық көрінсе де, интернеттегі бөтен адамдарға сенуге болмайды.</p>
+    </div>
+  </section>
+
+  <section id="scratch-game" style="margin-top: 50px;">
+    <h2>🎮 Интерактивті Scratch ойыны</h2>
+    <div style="display:flex;justify-content:center;align-items:center;flex-direction:column;background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);max-width:600px;margin:0 auto;">
+      <p style="margin-bottom: 15px; font-size: 18px;">Интернет қауіпсіздігі тақырыбындағы ойынды өтіп көр!</p>
+      <div style="width: 100%; max-width: 700px; margin: 0 auto;">
+        <div style="position: relative; width: 100%; padding-top: 83%; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+          <iframe 
+            src="https://scratch.mit.edu/projects/1224641081/embed"
+            allowtransparency="true"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen
+            style="position: absolute;top:0;left:0;width:100%;height:100%;border:none;">
+          </iframe>
+        </div>
+      </div>
+      <p style="margin-top: 10px; font-size: 14px; color: #666;">
+        *Ойын <a href="https://scratch.mit.edu" target="_blank">Scratch</a> сайтынан жүктелген
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Интернет қауіпсіздігі | Мектеп жобасы
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
